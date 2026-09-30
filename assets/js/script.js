@@ -110,9 +110,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 // WhatsApp is the primary conversion path for Asas Material.
                 // Every WhatsApp click is treated as a conversion/intent proxy.
                 // The location parameter above remains available for analysis.
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-18319521188/wdu9CM7Q7t0cEKTrtp9E'
-                });
+                if (!sessionStorage.getItem('asas_wa_converted')) {
+                    sessionStorage.setItem('asas_wa_converted', '1');
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-18319521188/wdu9CM7Q7t0cEKTrtp9E'
+                    });
+                }
             }
         } catch (e) {
             console.error('Tracking failed', e);

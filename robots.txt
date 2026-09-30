@@ -1,5 +1,1 @@
-User-agent: *
-Allow: /
-Disallow: /terima-kasih/
-
-Sitemap: https://asasmaterial.online/sitemap.xml
+User-agent: *\nAllow: /\n\nSitemap: https://asasmaterial.online/sitemap.xml\n
